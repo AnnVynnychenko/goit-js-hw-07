@@ -35,6 +35,12 @@ function onGalleryItemClick(event) {
         }
      
     });
+
+      document.removeEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            lightbox.close()
+        }
+    });
 }
 
 function initGallery(items) {

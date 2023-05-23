@@ -31,6 +31,12 @@ function onGalleryItemClick(event) {
         }
     
     });
+    
+      document.removeEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            instance.close()
+        }
+    });
 }
 
 function initGallery(items) {
